@@ -2,10 +2,11 @@
 using SdlSharp.Graphics;
 using SdlSharp.Input;
 
+var fullscreen = false;
 using Application app = new(Subsystems.Video, fontSupport: true);
 Size windowSize = new(640, 480);
 Rectangle windowRectangle = new(Window.UndefinedWindowLocation, windowSize);
-using var window = Window.Create("Text", windowRectangle, WindowOptions.Shown);
+using var window = Window.Create("Text", windowRectangle, WindowOptions.Shown | WindowOptions.Fullscreen);
 using var renderer = Renderer.Create(window, -1, RendererOptions.Accelerated);
 using var font = Font.Create("simsun.ttf", 14);
 
@@ -17,11 +18,17 @@ var inputTextTexture = font.RenderSolid(inputText, textColor, renderer);
 var renderText = false;
 
 Keyboard.StartTextInput();
-
+Keyboard.SetTextInputRectangle(new Rectangle { Location = new Point(12, 42) });
 Keyboard.KeyDown += (s, e) =>
 {
     switch (e.Keycode)
     {
+        case Keycode.Escape:
+            fullscreen = !fullscreen;
+            Keyboard.StopTextInput();
+            window.SetFullscreen(fullscreen, false);
+            Keyboard.StartTextInput();
+            break;
         case Keycode.Backspace:
             if (inputText.Length > 0)
             {
