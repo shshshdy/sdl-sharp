@@ -8,19 +8,4 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Paul Vick</Authors>
-    <Company>Paul Vick</Company>
-    <Description>A C# binding for the Simple DirectMedia Layer library (http://www.libsdl.org).</Description>
-    <Copyright>Copyright 2019</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/panopticoncentral/sdk-sharp</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="SdlSharp.Redist" Version="$(SdlRedistVersion)" />
-  </ItemGroup>
-
 </Project>
