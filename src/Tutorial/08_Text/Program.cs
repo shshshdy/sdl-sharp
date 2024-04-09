@@ -7,10 +7,11 @@ Size windowSize = new(640, 480);
 Rectangle windowRectangle = new(Window.UndefinedWindowLocation, windowSize);
 using var window = Window.Create("Text", windowRectangle, WindowOptions.Shown);
 using var renderer = Renderer.Create(window, -1, RendererOptions.Accelerated);
-using var font = Font.Create("SDS_8x8.ttf", 12);
-using var textTexture = font.RenderSolid("The quick brown fox jumped over the lazy dog", Colors.Black, renderer);
+using var font = Font.Create("simsun.ttf", 12);
 
-Color textColor = new(0, 0, 0, 0xFF);
+using var textTexture = font.RenderSolid("中文。可百查张杨路查The quick brown fox jumped over the lazy dog", Colors.White, renderer);
+
+Color textColor = new(0xFF, 0xFF, 0xFF, 0xFF);
 var inputText = "Some editable text";
 var inputTextTexture = font.RenderSolid(inputText, textColor, renderer);
 var renderText = false;
@@ -55,7 +56,7 @@ Keyboard.TextInput += (s, e) =>
 
 while (app.DispatchEvents())
 {
-    renderer.DrawColor = Colors.White;
+    renderer.DrawColor = Colors.Black;
     renderer.Clear();
 
     if (renderText)
