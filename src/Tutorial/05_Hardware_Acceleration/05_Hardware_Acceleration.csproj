@@ -2,9 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Tutorial</RootNamespace>
-    <PlatformTarget>x64</PlatformTarget>
     <AssemblyName>05HardwareAcceleration</AssemblyName>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -20,10 +19,6 @@
     <Content Include="Sunflowers.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="SdlSharp.Redist" Version="$(SdlRedistVersion)" />
   </ItemGroup>
 
   <ItemGroup>

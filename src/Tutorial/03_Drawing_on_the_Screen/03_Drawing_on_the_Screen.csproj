@@ -2,9 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Tutorial</RootNamespace>
-    <PlatformTarget>x64</PlatformTarget>
     <AssemblyName>03DrawingOnTheScreen</AssemblyName>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -21,11 +20,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="SdlSharp.Redist" Version="$(SdlRedistVersion)" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\SdlSharp\SdlSharp.csproj" />
   </ItemGroup>
