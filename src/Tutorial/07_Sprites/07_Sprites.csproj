@@ -10,6 +10,7 @@
     <Nullable>enable</Nullable>
     <!-- TODO: Remove when error is fixed. -->
     <NoWarn>CA1852</NoWarn>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

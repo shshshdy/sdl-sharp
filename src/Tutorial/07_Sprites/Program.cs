@@ -30,7 +30,7 @@ while (app.DispatchEvents())
         rotation = (rotation + 90) % 360;
     }
 
-    renderer.DrawColor = Colors.White;
+    renderer.DrawColor = Colors.Black;
     renderer.Clear();
 
     renderer.Copy(floor, new(upperLeftFloor * 16, spriteSize), new(Point.Origin, spriteSize * 4));
