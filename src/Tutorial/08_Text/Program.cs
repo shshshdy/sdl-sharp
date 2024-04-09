@@ -7,9 +7,9 @@ Size windowSize = new(640, 480);
 Rectangle windowRectangle = new(Window.UndefinedWindowLocation, windowSize);
 using var window = Window.Create("Text", windowRectangle, WindowOptions.Shown);
 using var renderer = Renderer.Create(window, -1, RendererOptions.Accelerated);
-using var font = Font.Create("simsun.ttf", 12);
+using var font = Font.Create("simsun.ttf", 14);
 
-using var textTexture = font.RenderSolid("中文。可百查张杨路查The quick brown fox jumped over the lazy dog", Colors.White, renderer);
+using var textTexture = font.RenderSolid("中文중국の城門The quick brown fox jumped over the lazy dog", Colors.White, renderer);
 
 Color textColor = new(0xFF, 0xFF, 0xFF, 0xFF);
 var inputText = "Some editable text";
