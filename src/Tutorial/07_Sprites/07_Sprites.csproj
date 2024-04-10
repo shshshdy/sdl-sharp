@@ -15,11 +15,6 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Floor.png" />
-    <None Remove="Player0.png" />
-    <None Remove="Player1.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Floor.png">

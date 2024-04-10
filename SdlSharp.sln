@@ -56,9 +56,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpuInfo", "src\Samples\Base
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clipboard", "src\Samples\Base\Clipboard\Clipboard.csproj", "{855580DE-2024-432D-A41B-C601762243C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versions", "src\Samples\Base\Versions\Versions.csproj", "{96B8D22F-6D6F-4432-A28A-41CFC8211331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versions", "src\Samples\Base\Versions\Versions.csproj", "{96B8D22F-6D6F-4432-A28A-41CFC8211331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBox", "src\Samples\Base\MessageBox\MessageBox.csproj", "{27AD41EA-70C8-4205-A47C-6941F8F42A28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageBox", "src\Samples\Base\MessageBox\MessageBox.csproj", "{27AD41EA-70C8-4205-A47C-6941F8F42A28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <!-- 包的id，在托管库内必须唯一 -->
+    <id>SdlSharp.Redist</id>
+
+    <!-- 解析依赖项时使用的包版本号 -->
+    <version>1.0.0.0</version>
+
+    <!-- 在库中显示的作者 -->
+    <authors>ssd</authors>
+
+    <!-- 库的拥有者，便于用户能够轻松的获取到该拥有者发布的其他的包  -->
+    <owners>ssd</owners>
+
+    <!-- 项目的许可和地址（比如将源代码发布到Github上时可以在此填写许可和） -->
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>http://github.com/shshshdy</projectUrl>
+
+    <!-- 在Visual Studio中的可视化包管理器中展示的图标 -->
+    <!-- <iconUrl>http://xxxxxxxxxx.png</iconUrl> -->
+
+    <!-- 在用户安装包的时候是否提示接受许可信息 -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <!-- 发布记录 -->
+    <releaseNotes>c# SDL2 资源包</releaseNotes>
+
+    <!-- 包的描述信息 -->
+    <description>SDL2 Native</description>
+
+    <!-- 版权 -->
+    <copyright>Copyright ©2023 ssd</copyright>
+
+    <!-- 标签，用户可通过标签进行搜索 -->
+    <tags>SDL2 IMAGE TTF MIXER NET</tags>
+  </metadata>
+
+  <!-- 当包安装完成的时候会自动展示readme.txt（包不能是依赖项目） -->
+  <files>
+    <file src="SdlSharp.Redist.targets" target="" />
+    <file src="win-x64\**" target="runtimes\win-x64\native" />
+    <file src="win-arm64\**" target="runtimes\win-arm64\native" />
+    <file src="osx-x64\**" target="runtimes\osx-x64\native" />
+    <file src="osx-arm64\**" target="runtimes\osx-arm64\native" />
+  </files>
+</package>

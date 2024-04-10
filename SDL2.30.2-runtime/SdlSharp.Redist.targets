@@ -1,0 +1,55 @@
+<Project>
+  <PropertyGroup>
+    <IsWindows Condition="'$(OS)' == 'Windows_NT'">true</IsWindows>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildRuntimeType)' == 'Core'">
+    <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
+    <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
+    <IsX64 Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture)' == 'X64'">true</IsX64>
+    <IsARM64 Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture)' == 'Arm64'">true</IsARM64>
+  </PropertyGroup>
+  
+  <Choose>
+    <When Condition="'$(IsWindows)' == 'true' and '$(IsX64)' == 'true'">
+      <ItemGroup>
+        <NativeLibs Include="$(MSBuildThisFileDirectory)\runtimes\win-x64\*.*" />
+        <None Include="@(NativeLibs)">
+          <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <Visible>false</Visible>
+        </None>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(IsWindows)' == 'true' and '$(IsARM64)' == 'true'">
+      <ItemGroup>
+        <NativeLibs Include="$(MSBuildThisFileDirectory)\runtimes\win-arm64\*.*" />
+        <None Include="@(NativeLibs)">
+          <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <Visible>false</Visible>
+        </None>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(IsOSX)' == 'true' and '$(IsX64)' == 'true'">
+      <ItemGroup>
+        <NativeLibs Include="$(MSBuildThisFileDirectory)\runtimes\osx-x64\*.*" />
+        <None Include="@(NativeLibs)">
+          <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <Visible>false</Visible>
+        </None>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(IsOSX)' == 'true' and '$(IsARM64)' == 'true'">
+      <ItemGroup>
+        <NativeLibs Include="$(MSBuildThisFileDirectory)\runtimes\osx-arm64\*.*" />
+        <None Include="@(NativeLibs)">
+          <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <Visible>false</Visible>
+        </None>
+      </ItemGroup>
+    </When>
+  </Choose>
+</Project>
