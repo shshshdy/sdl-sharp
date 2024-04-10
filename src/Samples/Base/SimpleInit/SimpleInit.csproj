@@ -13,10 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SdlSharp.Redist" Version="$(SdlRedistVersion)" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\..\SdlSharp\SdlSharp.csproj" />
   </ItemGroup>
 
