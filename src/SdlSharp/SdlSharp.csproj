@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SdlSharp.Redist" Version="1.0.0" />
+    <PackageReference Include="Sdl2.Native" Version="1.0.0" />
   </ItemGroup>
-
 </Project>

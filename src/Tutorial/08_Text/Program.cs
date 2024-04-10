@@ -6,7 +6,7 @@ var fullscreen = false;
 using Application app = new(Subsystems.Video, fontSupport: true);
 Size windowSize = new(640, 480);
 Rectangle windowRectangle = new(Window.UndefinedWindowLocation, windowSize);
-using var window = Window.Create("Text", windowRectangle, WindowOptions.Shown | WindowOptions.Fullscreen);
+using var window = Window.Create("Text", windowRectangle, WindowOptions.Shown);
 using var renderer = Renderer.Create(window, -1, RendererOptions.Accelerated);
 using var font = Font.Create("simsun.ttf", 14);
 
