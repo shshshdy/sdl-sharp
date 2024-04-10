@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <!-- 包的id，在托管库内必须唯一 -->
-    <id>SdlSharp.Redist</id>
+    <id>Sdl2.Native</id>
 
     <!-- 解析依赖项时使用的包版本号 -->
     <version>1.0.0.0</version>
@@ -38,7 +38,7 @@
 
   <!-- 当包安装完成的时候会自动展示readme.txt（包不能是依赖项目） -->
   <files>
-    <file src="SdlSharp.Redist.targets" target="" />
+    <file src="Sdl2.Native.targets" target="" />
     <file src="win-x64\**" target="runtimes\win-x64\native" />
     <file src="win-arm64\**" target="runtimes\win-arm64\native" />
     <file src="osx-x64\**" target="runtimes\osx-x64\native" />
