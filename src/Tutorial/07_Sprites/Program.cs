@@ -32,6 +32,8 @@ while (app.DispatchEvents())
 
     renderer.DrawColor = Colors.Black;
     renderer.Clear();
+    renderer.DrawColor = Colors.Red;
+    renderer.DrawRectangle(new Rectangle(new Point(200, 20), new Size(100, 100)));
 
     renderer.Copy(floor, new(upperLeftFloor * 16, spriteSize), new(Point.Origin, spriteSize * 4));
     renderer.Copy(floor, new(upperRightFloor * 16, spriteSize), new(new(spriteSize.Width * 4, 0), spriteSize * 4));
