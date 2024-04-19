@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Samples</RootNamespace>
     <PlatformTarget>x64</PlatformTarget>
     <AssemblyName>Record</AssemblyName>
@@ -12,6 +12,9 @@
     <NoWarn>CA1852</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel></WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\SdlSharp\SdlSharp.csproj" />
   </ItemGroup>
