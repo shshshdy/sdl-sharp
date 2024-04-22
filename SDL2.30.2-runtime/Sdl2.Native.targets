@@ -51,5 +51,25 @@
         </None>
       </ItemGroup>
     </When>
+    <When Condition="'$(IsLinux)' == 'true' and '$(IsX64)' == 'true'">
+      <ItemGroup>
+        <NativeLibs Include="$(MSBuildThisFileDirectory)\runtimes\linux-x64\*.*" />
+        <None Include="@(NativeLibs)">
+          <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <Visible>false</Visible>
+        </None>
+      </ItemGroup>
+    </When>
+     <When Condition="'$(IsLinux)' == 'true' and '$(IsARM64)' == 'true'">
+      <ItemGroup>
+        <NativeLibs Include="$(MSBuildThisFileDirectory)\runtimes\linux-arm64\*.*" />
+        <None Include="@(NativeLibs)">
+          <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <Visible>false</Visible>
+        </None>
+      </ItemGroup>
+    </When>
   </Choose>
 </Project>

@@ -5,7 +5,7 @@
     <id>Sdl2.Native</id>
 
     <!-- 解析依赖项时使用的包版本号 -->
-    <version>1.0.0.0</version>
+    <version>1.0.0.1</version>
 
     <!-- 在库中显示的作者 -->
     <authors>ssd</authors>
@@ -24,13 +24,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
     <!-- 发布记录 -->
-    <releaseNotes>c# SDL2 资源包</releaseNotes>
+    <releaseNotes>add linux native</releaseNotes>
 
     <!-- 包的描述信息 -->
     <description>SDL2 Native</description>
 
     <!-- 版权 -->
-    <copyright>Copyright ©2023 ssd</copyright>
+    <copyright>Copyright ©2024 ssd</copyright>
 
     <!-- 标签，用户可通过标签进行搜索 -->
     <tags>SDL2 IMAGE TTF MIXER NET</tags>
@@ -43,5 +43,7 @@
     <file src="win-arm64\**" target="runtimes\win-arm64\native" />
     <file src="osx-x64\**" target="runtimes\osx-x64\native" />
     <file src="osx-arm64\**" target="runtimes\osx-arm64\native" />
+    <file src="linux-x64\**" target="runtimes\linux-x64\native" />
+    <file src="linux-arm64\**" target="runtimes\linux-arm64\native" />
   </files>
 </package>
