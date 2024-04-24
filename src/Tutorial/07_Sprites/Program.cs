@@ -6,7 +6,7 @@ Size windowSize = new(640, 480);
 Rectangle windowRectangle = new(Window.UndefinedWindowLocation, windowSize);
 using var window = Window.Create("Sprites", windowRectangle, WindowOptions.Shown);
 using var renderer = Renderer.Create(window, -1, RendererOptions.Accelerated | RendererOptions.PresentVSync);
-
+window.Title += $" -{renderer.Info.Name}";
 using var floor = Image.Load("Floor.png", renderer);
 using var player0 = Image.Load("Player0.png", renderer);
 using var player1 = Image.Load("Player1.png", renderer);
