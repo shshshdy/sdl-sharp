@@ -1,7 +1,14 @@
-﻿using SdlSharp;
+﻿using System.Runtime.InteropServices;
+
+using SdlSharp;
 using SdlSharp.Graphics;
 
-using Application app = new(Subsystems.Video, ImageFormats.Png);
+using Application app =
+    (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && Environment.OSVersion.Version.Major >= 10) ?// windows 10 及以上 使用 dx11
+    new(Subsystems.Video, ImageFormats.Png, hints: new[] { (Hint.RenderDriver, "direct3d11") }) :
+    new(Subsystems.Video, ImageFormats.Png);
+
+//using Application app = new(Subsystems.Video, ImageFormats.Png);
 Size windowSize = new(640, 480);
 Rectangle windowRectangle = new(Window.UndefinedWindowLocation, windowSize);
 using var window = Window.Create("Sprites", windowRectangle, WindowOptions.Shown);
